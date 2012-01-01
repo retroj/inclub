@@ -1,0 +1,35 @@
+
+inclub
+======
+
+The syntax form `inclub` is a convenience substitute for `include` for use
+in multi-file projects.  When the program may be run either interpreted or
+compiled, and may be executed from outside its directory, possibly through
+a symlink, inclub handles the details of making sure the "inclubbed" files
+get loaded as intended.
+
+In compiled code, inclub simply expands to include, meaning the inclubbed
+file will be compiled into the binary.
+
+In interpreted code, inclub resolves any symlinks back to the directory
+the program resides in, and calls `load` on the inclubbed file in that
+directory.
+
+To use inclub, to load a file called "myfile.scm":
+
+    (use inclub)
+    (inclub "myfile")
+
+If myfile.scm contains a module called `myfile`, add this:
+
+    (import myfile)
+
+If multiple files within the project need to import this module, it should
+be inclubbed only once, in the main file.  The other files can then import
+the module.
+
+Etc
+---
+
+Thanks to Zbigniew for working out the basic mechanism, and also for
+proposing the name "inclub".  inclub: the brute force include.
