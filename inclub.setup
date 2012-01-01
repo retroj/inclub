@@ -1,0 +1,10 @@
+
+(compile -s -O3 -d0 inclub.scm -j inclub)
+(compile -s -O3 -d0 inclub.import.scm)
+
+(install-extension
+  'inclub
+  '("inclub.so" "inclub.import.so")
+  '((syntax)
+    (import-only)
+    (version 0.1)))

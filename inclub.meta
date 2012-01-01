@@ -1,0 +1,7 @@
+
+((license "BSD")
+ (category macros)
+ (needs filepath posix)
+ (author "John J. Foerch")
+ (synopsis "Brute-force include for multi-file programs"))
+
