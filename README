@@ -15,7 +15,7 @@ In interpreted code, inclub resolves any symlinks back to the directory
 the program resides in, and calls `load` on the inclubbed file in that
 directory.
 
-To use inclub, to load a file called "myfile.scm":
+To use inclub to load a file called "myfile.scm":
 
     (use inclub)
     (inclub "myfile")
