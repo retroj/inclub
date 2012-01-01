@@ -24,9 +24,9 @@ If myfile.scm contains a module called `myfile`, add this:
 
     (import myfile)
 
-If multiple files within the project need to import this module, it should
-be inclubbed only once, in the main file.  The other files can then import
-the module.
+If multiple files within the project need to import the module, it should
+be inclubbed only in the main file.  The other files can then import the
+module.
 
 Etc
 ---
